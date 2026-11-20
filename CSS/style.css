@@ -173,3 +173,119 @@
             color: #8994a3;
         }
 
+
+/* ===== BANNER PRINCIPAL ===== */
+
+.banner {
+    min-height: 520px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+    background:
+        linear-gradient(90deg, rgba(10, 10, 10, 0.92) 0%,
+        rgba(10, 10, 10, 0.65) 48%,
+        rgba(10, 10, 10, 0.10) 100%),
+        url("../imagens/carro-autotech.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-conteudo {
+    max-width: 620px;
+    color: #fff;
+}
+
+.banner-etiqueta {
+    display: inline-block;
+    color: #ff4545;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.banner-conteudo h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+
+.banner-conteudo h2 span {
+    display: block;
+    color: #ed2929;
+}
+
+.banner-conteudo p {
+    max-width: 490px;
+    color: #e2e2e2;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.banner-botao {
+    display: inline-block;
+    background: #e52525;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.banner-botao:hover {
+    background: #bd1717;
+    transform: translateY(-3px);
+}
+
+/* ===== FERRAMENTAS ===== */
+
+.ferramentas {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.ferramentas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.ferramentas .card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 768px) {
+    .banner {
+        min-height: 450px;
+        padding: 55px 7%;
+        background-position: 60% center;
+    }
+
+    .banner-conteudo h2 {
+        font-size: 38px;
+    }
+
+    .banner-conteudo p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        min-height: 420px;
+    }
+
+    .banner-conteudo h2 {
+        font-size: 32px;
+    }
+}
