@@ -1,291 +1,714 @@
-   /* ==============  CONFIGURAÇÕES GERAIS ================ */
 
-        * {
-            box-sizing: border-box;
-        }
+/* ==============================
+   1. CONFIGURAÇÕES GERAIS
+================================ */
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f2f4f7;
-            color: #172033;
-        }
+:root {
+    --vermelho: #e52525;
+    --vermelho-escuro: #bd1717;
+    --preto: #111111;
+    --grafite: #191919;
+    --cinza: #777777;
+    --cinza-claro: #f5f5f5;
+    --branco: #ffffff;
+}
 
-        /* =======  TOPO ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .topo {
-            background-color: #101923;
-            color: white;
-            padding: 25px 50px;
-            min-height: 130px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .logo {
-            display: inline-block;
-            width: 45%;
-            vertical-align: middle;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--branco);
+    color: var(--preto);
+}
 
-        .logo h1 {
-            margin: 0;
-            font-size: 38px;
-        }
+a {
+    text-decoration: none;
+}
 
-        .logo span {
-            color: #e52525;
-        }
+/* ==============================
+   2. CABEÇALHO
+================================ */
 
-        .logo p {
-            margin-top: 5px;
-            color: #bfc7d1;
-            letter-spacing: 3px;
-        }
-
-        .informacao {
-            display: inline-block;
-            width: 50%;
-            text-align: right;
-            vertical-align: middle;
-        }
-
-        .informacao h3 {
-            margin: 0;
-            color: white;
-        }
-
-        .informacao p {
-            color: #bfc7d1;
-        }
-
-        /* ====================  MENU  ======================== */
-
-        .menu {
-            background-color: #19232f;
-            text-align: center;
-            padding: 0;
-        }
-
-        .menu a {
-            display: inline-block;
-            padding: 22px 28px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .menu a:hover {
-            background-color: #e52525;
-        }
-
-
-        /* ============   FERRAMENTAS   ================ */
-
-        .ferramentas {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        .ferramentas h2 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        .ferramentas>p {
-            color: #667085;
-            margin-bottom: 30px;
-        }
-
-        /* ==================  CARDS  ================ */
-
-        .card {
-            display: inline-block;
-            width: 30%;
-            min-height: 230px;
-            margin: 1%;
-            padding: 30px 20px;
-            background-color: white;
-            border-radius: 10px;
-            vertical-align: top;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        .icone {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 21px;
-            margin: 10px 0;
-        }
-
-        .card p {
-            color: #667085;
-            line-height: 1.5;
-            min-height: 45px;
-        }
-
-        .botao {
-            display: inline-block;
-            background-color: #e52525;
-            color: white;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .botao:hover {
-            background-color: #bd1818;
-        }
-
-        /* ================ RODAPÉ  =============== */
-
-        .rodape {
-            background-color: #101923;
-            color: white;
-            padding: 35px 50px;
-            margin-top: 60px;
-        }
-
-        .rodape-coluna {
-            display: inline-block;
-            width: 32%;
-            vertical-align: top;
-        }
-
-        .rodape h3 {
-            margin-top: 0;
-        }
-
-        .rodape p {
-            color: #bfc7d1;
-        }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid #34404d;
-            margin-top: 30px;
-            padding-top: 20px;
-            color: #8994a3;
-        }
-
-
-/* ===== BANNER PRINCIPAL ===== */
-
-.banner {
-    min-height: 520px;
+.topo {
     width: 100%;
+    min-height: 90px;
+    padding: 18px 8%;
     display: flex;
     align-items: center;
-    padding: 70px 9%;
-    background:
-        linear-gradient(90deg, rgba(10, 10, 10, 0.92) 0%,
-        rgba(10, 10, 10, 0.65) 48%,
-        rgba(10, 10, 10, 0.10) 100%),
-        url("../imagens/carro-autotech.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    justify-content: space-between;
+    gap: 30px;
+    background: var(--preto);
 }
 
-.banner-conteudo {
-    max-width: 620px;
-    color: #fff;
+.logo h1 {
+    color: white;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -1px;
 }
 
-.banner-etiqueta {
-    display: inline-block;
-    color: #ff4545;
-    font-size: 13px;
-    font-weight: 800;
+.logo h1 span,
+.rodape-marca h2 span {
+    color: var(--vermelho);
+}
+
+.logo p {
+    color: #999;
+    font-size: 9px;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-top: 3px;
 }
 
-.banner-conteudo h2 {
-    font-size: clamp(35px, 5vw, 58px);
-    line-height: 1.12;
-    margin-bottom: 22px;
-    font-weight: 800;
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-.banner-conteudo h2 span {
-    display: block;
-    color: #ed2929;
+.menu a {
+    color: #ddd;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.banner-conteudo p {
-    max-width: 490px;
-    color: #e2e2e2;
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 30px;
+.menu a:hover {
+    color: var(--vermelho);
 }
 
-.banner-botao {
-    display: inline-block;
-    background: #e52525;
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 6px;
+.topo-botao {
+    background: var(--vermelho);
+    color: white;
+    padding: 13px 19px;
+    border-radius: 4px;
+    font-size: 12px;
     font-weight: 700;
     transition: 0.3s;
 }
 
-.banner-botao:hover {
-    background: #bd1717;
+.topo-botao:hover {
+    background: var(--vermelho-escuro);
+}
+
+/* ==============================
+   3. BANNER PRINCIPAL
+================================ */
+
+.banner {
+    min-height: 610px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    overflow: hidden;
+    background: #111;
+}
+
+.banner-imagem {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-sombra {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.94) 0%,
+        rgba(0, 0, 0, 0.78) 42%,
+        rgba(0, 0, 0, 0.20) 100%
+    );
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    color: white;
+}
+
+.etiqueta,
+.secao-etiqueta {
+    color: var(--vermelho);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.ponto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--vermelho);
+}
+
+.banner-conteudo h2 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 23px;
+}
+
+.banner-conteudo h2 span {
+    display: block;
+    color: var(--vermelho);
+}
+
+.banner-conteudo p {
+    max-width: 490px;
+    color: #d0d0d0;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.banner-acoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.botao-principal {
+    display: inline-block;
+    padding: 16px 24px;
+    background: var(--vermelho);
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background: var(--vermelho-escuro);
     transform: translateY(-3px);
 }
 
-/* ===== FERRAMENTAS ===== */
+.botao-secundario {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.botao-secundario:hover {
+    color: var(--vermelho);
+}
+
+.banner-rodape {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 9%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* ==============================
+   4. DIFERENCIAIS
+================================ */
+
+.diferenciais {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 35px 9%;
+    background: var(--branco);
+    border-bottom: 1px solid #eee;
+}
+
+.diferencial {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 10px 25px;
+    border-right: 1px solid #e8e8e8;
+}
+
+.diferencial:last-child {
+    border-right: none;
+}
+
+.diferencial-numero {
+    color: var(--vermelho);
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.diferencial h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.diferencial p {
+    color: var(--cinza);
+    font-size: 11px;
+}
+
+/* ==============================
+   5. SOBRE
+================================ */
+
+.sobre {
+    padding: 110px 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 85px;
+}
+
+.sobre-imagem {
+    position: relative;
+    min-height: 380px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.sobre-legenda {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 75%;
+    padding: 22px;
+    background: var(--vermelho);
+    color: white;
+}
+
+.sobre-legenda span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.sobre-legenda p {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.sobre-conteudo h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 18px 0;
+}
+
+.sobre-conteudo h2 span {
+    color: var(--vermelho);
+}
+
+.sobre-conteudo p {
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.link-vermelho {
+    display: inline-block;
+    color: var(--vermelho);
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+/* ==============================
+   6. FERRAMENTAS
+================================ */
 
 .ferramentas {
-    padding: 70px 8%;
-    text-align: center;
+    padding: 100px 9%;
+    background: var(--cinza-claro);
+}
+
+.ferramentas-topo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.ferramentas-topo h2 {
+    font-size: clamp(32px, 4vw, 45px);
+    letter-spacing: -1.5px;
+    margin: 15px 0;
+}
+
+.ferramentas-topo h2 span {
+    color: var(--vermelho);
+}
+
+.ferramentas-topo p {
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.ferramentas-contador {
+    color: #888;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    padding-bottom: 5px;
 }
 
 .ferramentas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
-.ferramentas .card {
-    width: 100%;
-    box-sizing: border-box;
+.card {
+    background: white;
+    padding: 30px;
+    min-height: 265px;
+    border: 1px solid #eaeaea;
+    border-radius: 7px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
-/* ===== RESPONSIVIDADE ===== */
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--vermelho);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
 
-@media (max-width: 768px) {
+.card-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.card-icone {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0f0;
+    color: var(--vermelho);
+    font-size: 22px;
+    font-weight: 900;
+    border-radius: 6px;
+}
+
+.card-numero {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.card h3 {
+    color: var(--preto);
+    font-size: 17px;
+    margin-bottom: 13px;
+}
+
+.card p {
+    color: var(--cinza);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.card a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--vermelho);
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: auto;
+}
+
+.card a span {
+    font-size: 19px;
+}
+
+/* ==============================
+   7. CHAMADA FINAL
+================================ */
+
+.chamada {
+    padding: 75px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: var(--grafite);
+    color: white;
+}
+
+.chamada h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.chamada h2 span {
+    color: var(--vermelho);
+}
+
+.chamada p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   8. RODAPÉ
+================================ */
+
+.rodape {
+    padding: 65px 9% 20px;
+    background: #0b0b0b;
+    color: white;
+}
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 45px;
+    padding-bottom: 50px;
+}
+
+.rodape-marca h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.rodape-marca > p {
+    color: #888;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.rodape-marca > span {
+    display: block;
+    max-width: 240px;
+    color: #999;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.rodape-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.rodape-coluna h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.rodape-coluna a,
+.rodape-coluna p {
+    color: #999;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.rodape-coluna a:hover {
+    color: var(--vermelho);
+}
+
+.rodape-final {
+    border-top: 1px solid #292929;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #777;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* ==============================
+   9. RESPONSIVIDADE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .topo {
+        padding: 18px 5%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .sobre {
+        gap: 45px;
+    }
+
+    .ferramentas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .topo {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .topo-botao {
+        display: none;
+    }
+
     .banner {
-        min-height: 450px;
-        padding: 55px 7%;
-        background-position: 60% center;
+        min-height: 570px;
+        padding: 70px 7%;
+    }
+
+    .banner-imagem {
+        object-position: 60% center;
+    }
+
+    .banner-sombra {
+        background: rgba(0, 0, 0, 0.72);
     }
 
     .banner-conteudo h2 {
-        font-size: 38px;
+        font-size: 43px;
     }
 
-    .banner-conteudo p {
-        font-size: 15px;
+    .banner-rodape {
+        left: 7%;
+        right: 7%;
+        font-size: 8px;
+    }
+
+    .diferenciais {
+        grid-template-columns: 1fr;
+        padding: 20px 7%;
+    }
+
+    .diferencial {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 20px 0;
+    }
+
+    .diferencial:last-child {
+        border-bottom: none;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+        padding: 75px 7%;
+        gap: 55px;
+    }
+
+    .sobre-imagem {
+        min-height: 280px;
+    }
+
+    .sobre-imagem img {
+        height: 280px;
+    }
+
+    .sobre-legenda {
+        right: -8px;
+        width: 85%;
+    }
+
+    .ferramentas {
+        padding: 75px 7%;
+    }
+
+    .ferramentas-topo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ferramentas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chamada {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 65px 7%;
+    }
+
+    .rodape {
+        padding: 55px 7% 20px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 20px;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+        line-height: 1.7;
     }
 }
 
-@media (max-width: 480px) {
-    .banner {
-        min-height: 420px;
+@media (max-width: 400px) {
+
+    .menu a {
+        font-size: 11px;
     }
 
     .banner-conteudo h2 {
-        font-size: 32px;
+        font-size: 35px;
+    }
+
+    .banner-acoes {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
     }
 }
