@@ -37,7 +37,8 @@ Ao longo do desenvolvimento, realizei revisões para melhorar a apresentação d
 
 ## 🖥️ Prévia do projeto
 
-<img width="1920" height="2894" alt="image" src="https://github.com/user-attachments/assets/74068fd0-a053-4761-a553-704caf298514" />
+<img width="1920" height="2894" alt="image" src="https://github.com/user-attachments/assets/7e986d5b-5080-4e3e-92ef-ca0d9ce0574a" />
+
 
 
 ## 📚 Aprendizados
