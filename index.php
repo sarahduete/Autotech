@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,23 +10,21 @@
 </head>
 
 <body>
-    <!-- ========================= TOPO  ========================== -->
+
+    <!-- TOPO -->
     <header class="topo">
         <div class="logo">
-            <h1>
-                Auto<span>Tech</span>
-            </h1>
+            <h1>Auto<span>Tech</span></h1>
             <p>OFICINA MECÂNICA</p>
         </div>
 
         <div class="informacao">
             <h3>PORTAL DE FERRAMENTAS</h3>
-            <p>
-                Soluções rápidas para o dia a dia da oficina
-            </p>
+            <p>Soluções rápidas para o dia a dia da oficina</p>
         </div>
     </header>
-    <!-- =========================   MENU   ========================== -->
+
+    <!-- MENU -->
     <nav class="menu">
         <a href="index.php">Início</a>
         <a href="ferramentas/calculadora-orcamento.php">Orçamento</a>
@@ -34,110 +33,83 @@
         <a href="ferramentas/avaliador-manutencao.php">Serviço</a>
         <a href="ferramentas/simulador-viagem.php">Viagem</a>
     </nav>
-    <!-- =========================  FERRAMENTAS  ========================== -->
-    <section class="ferramentas">
+
+    <!-- DESTAQUE PRINCIPAL -->
+    <section class="banner">
+        <div class="banner-conteudo">
+            <span class="banner-etiqueta">TECNOLOGIA PARA SUA OFICINA</span>
+
+            <h2>
+                Seu carro em boas mãos.
+                <span>Sua oficina mais eficiente.</span>
+            </h2>
+
+            <p>
+                Ferramentas inteligentes para facilitar cálculos,
+                orçamentos e o atendimento no dia a dia.
+            </p>
+
+            <a href="#ferramentas" class="banner-botao">
+                Conheça as ferramentas
+            </a>
+        </div>
+    </section>
+
+    <!-- FERRAMENTAS -->
+    <section class="ferramentas" id="ferramentas">
+
         <h2>Ferramentas disponíveis</h2>
+
         <p>
             Utilize as ferramentas para auxiliar no atendimento aos clientes.
         </p>
 
-        <!-- CARD 1 -->
-        <article class="card">
-            <div class="icone">
-                💰
-            </div>
-            <h3>Calculadora de Orçamento</h3>
-            <p>
-                Calcule rapidamente o valor de peças e mão de obra.
-            </p>
-            <a href="ferramentas/calculadora-orcamento.php" class="botao">
-                Acessar
-            </a>
-        </article>
+        <div class="ferramentas-grid">
 
-        <!-- CARD 2 -->
-        <article class="card">
-            <div class="icone">
-                🧮​
-            </div>
+            <article class="card">
+                <div class="icone">💰</div>
+                <h3>Calculadora de Orçamento</h3>
+                <p>Calcule rapidamente o valor de peças e mão de obra.</p>
+                <a href="ferramentas/calculadora-orcamento.php" class="botao">Acessar</a>
+            </article>
 
-            <h3>Calculadora de Pneus</h3>
+            <article class="card">
+                <div class="icone">🧮</div>
+                <h3>Calculadora de Pneus</h3>
+                <p>Calcule o valor da troca, montagem e balanceamento.</p>
+                <a href="ferramentas/troca-pneus.php" class="botao">Acessar</a>
+            </article>
 
-            <p>Calcule o valor da troca, montagem e balanceamento.</p>
-            <a href="ferramentas/troca-pneus.php" class="botao">
-                Acessar
-            </a>
-        </article>
+            <article class="card">
+                <div class="icone">⛽</div>
+                <h3>Calculadora de Combustível</h3>
+                <p>Analise o consumo e o custo de combustível.</p>
+                <a href="ferramentas/calculadora-combustivel.php" class="botao">Acessar</a>
+            </article>
 
-        <!-- CARD 3 -->
-        <article class="card">
+            <article class="card">
+                <div class="icone">🔧</div>
+                <h3>Avaliador de Manutenção</h3>
+                <p>Verifique a situação da manutenção do veículo.</p>
+                <a href="ferramentas/avaliador-manutencao.php" class="botao">Acessar</a>
+            </article>
 
-            <div class="icone">
-                ⛽
-            </div>
+            <article class="card">
+                <div class="icone">🛣️</div>
+                <h3>Simulador de Viagem</h3>
+                <p>Estime o consumo e o custo de combustível da viagem.</p>
+                <a href="ferramentas/simulador-viagem.php" class="botao">Acessar</a>
+            </article>
 
-            <h3>Calculadora de Combustível</h3>
-
-            <p>
-                Analise o consumo e o custo de combustível.
-            </p>
-
-            <a href="ferramentas/calculadora-combustivel.php" class="botao">
-                Acessar
-            </a>
-        </article>
-
-        <!-- CARD 4 -->
-        <article class="card">
-
-            <div class="icone">
-                🔧
-            </div>
-
-            <h3>Avaliador de Manutenção</h3>
-
-            <p>
-                Verifique a situação da manutenção do veículo.
-            </p>
-
-            <a href="ferramentas/avaliador-manutencao.php" class="botao">
-                Acessar
-            </a>
-        </article>
-
-
-        <!-- CARD 5 -->
-        <article class="card">
-
-            <div class="icone">
-                🛣️
-            </div>
-
-            <h3>Simulador de Viagem</h3>
-
-            <p>
-                Estime o consumo e o custo de combustível da viagem.
-            </p>
-
-            <a href="ferramentas/simulador-viagem.php" class="botao">
-                Acessar
-            </a>
-        </article>
+        </div>
     </section>
 
-    <!-- =========================  RODAPÉ  ========================== -->
-
+    <!-- RODAPÉ -->
     <footer class="rodape">
+
         <div class="rodape-coluna">
-
-            <h3>
-                Auto<span style="color:#e52525;">Tech</span>
-            </h3>
-
-            <p>
-                Portal de ferramentas para oficina mecânica.
-            </p>
-
+            <h3>Auto<span>Tech</span></h3>
+            <p>Portal de ferramentas para oficina mecânica.</p>
         </div>
 
         <div class="rodape-coluna">
@@ -149,19 +121,15 @@
 
         <div class="rodape-coluna">
             <h3>AutoTech</h3>
-
-            <p>
-                Qualidade em cada quilômetro.
-            </p>
-
-            <p>
-                Santana de Parnaíba - SP
-            </p>
+            <p>Qualidade em cada quilômetro.</p>
+            <p>Santana de Parnaíba - SP</p>
         </div>
 
         <div class="copyright">
             © 2026 AutoTech - Portal de Ferramentas
         </div>
+
     </footer>
+
 </body>
 </html>
