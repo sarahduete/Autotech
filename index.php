@@ -40,7 +40,7 @@
         <section class="banner" id="inicio">
 
             <img
-                src="imagens/carro-autotech.jpg"
+                src="imagens/carro-autotech.jfif"
                 alt="Carro esportivo em destaque"
                 class="banner-imagem"
             >
