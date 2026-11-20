@@ -1,0 +1,424 @@
+
+/* ========================================
+   AUTOTECH - FERRAMENTAS
+======================================== */
+
+:root {
+    --vermelho: #e52525;
+    --vermelho-escuro: #bd1818;
+    --preto: #101010;
+    --grafite: #191919;
+    --grafite-claro: #252525;
+    --fundo: #f4f4f4;
+    --branco: #ffffff;
+    --texto: #252525;
+    --texto-suave: #777777;
+    --borda: #e5e5e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* ========================================
+   TOPO
+======================================== */
+
+.topo {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 25px 7%;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo h1 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    color: var(--vermelho);
+}
+
+.logo p {
+    margin-top: 2px;
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.informacao {
+    text-align: right;
+}
+
+.informacao h3 {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.informacao p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu {
+    background: var(--grafite);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    border-top: 1px solid #292929;
+    border-bottom: 3px solid var(--vermelho);
+}
+
+.menu a {
+    display: inline-block;
+    padding: 19px 23px;
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+.calculadora,
+.avaliador,
+.simulador {
+    width: 90%;
+    max-width: 680px;
+    margin: 65px auto;
+}
+
+.calculadora h2,
+.avaliador h2,
+.simulador h2 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--preto);
+    margin-bottom: 12px;
+    letter-spacing: -0.7px;
+}
+
+.calculadora h2::after,
+.avaliador h2::after,
+.simulador h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: var(--vermelho);
+    border-radius: 5px;
+    margin: 15px auto 30px;
+}
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+.formulario {
+    background: var(--branco);
+    padding: 38px;
+    border-radius: 14px;
+    border: 1px solid var(--borda);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #292929;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select {
+    display: block;
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 23px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background: #fafafa;
+    color: var(--texto);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: var(--vermelho);
+    background: var(--branco);
+    box-shadow: 0 0 0 3px rgba(229, 37, 37, 0.10);
+}
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.botao {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--vermelho-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 37, 37, 0.2);
+}
+
+/* ========================================
+   RESULTADOS
+======================================== */
+
+.resultado {
+    background: var(--branco);
+    margin-top: 28px;
+    padding: 32px;
+    border-radius: 14px;
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--vermelho);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.resultado h2 {
+    text-align: left;
+    font-size: 22px;
+    margin-bottom: 22px;
+    color: var(--preto);
+}
+
+.resultado h2::after {
+    display: none;
+}
+
+.resultado p {
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeeee;
+    color: #555;
+    font-size: 15px;
+}
+
+.resultado p:last-child {
+    border-bottom: none;
+}
+
+.resultado strong {
+    color: var(--preto);
+}
+
+.total {
+    margin-top: 15px;
+    padding-top: 20px !important;
+    font-size: 20px !important;
+    color: var(--vermelho) !important;
+    font-weight: bold;
+    border-top: 1px solid var(--borda);
+}
+
+/* ========================================
+   ALERTAS E SITUAÇÕES
+======================================== */
+
+.alerta,
+.situacao {
+    margin-top: 22px;
+    padding: 17px;
+    background: #fff0f0;
+    color: #b71919;
+    border: 1px solid #f5cccc;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ========================================
+   CLASSIFICAÇÃO DE CONSUMO
+======================================== */
+
+.classificacao {
+    margin-top: 28px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.titulo-classificacao {
+    background: var(--grafite);
+    color: var(--branco);
+    text-align: center;
+    padding: 18px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.linha-classificacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.vermelho {
+    background: #ffe1e1;
+    color: #a00000;
+}
+
+.amarelo {
+    background: #fff1c9;
+    color: #805900;
+}
+
+.verde {
+    background: #dff3e3;
+    color: #226b35;
+}
+
+.azul {
+    background: #dceeff;
+    color: #185a91;
+}
+
+.rodape-classificacao {
+    background: #f7f7f7;
+    color: var(--texto-suave);
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 40px 20px;
+    margin-top: 75px;
+    text-align: center;
+    border-top: 3px solid var(--vermelho);
+}
+
+.rodape h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.rodape p {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .topo {
+        padding: 25px 5%;
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .informacao {
+        text-align: center;
+    }
+
+    .menu a {
+        padding: 14px 12px;
+        font-size: 12px;
+    }
+
+    .calculadora,
+    .avaliador,
+    .simulador {
+        width: 92%;
+        margin: 40px auto;
+    }
+
+    .calculadora h2,
+    .avaliador h2,
+    .simulador h2 {
+        font-size: 25px;
+    }
+
+    .formulario {
+        padding: 25px 20px;
+    }
+
+    .resultado {
+        padding: 24px 20px;
+    }
+
+    .linha-classificacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rodape {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 32px;
+    }
+
+    .menu a {
+        padding: 12px 9px;
+        font-size: 11px;
+    }
+
+    .formulario {
+        padding: 22px 16px;
+    }
+}
