@@ -37,7 +37,8 @@ Ao longo do desenvolvimento, realizei revisões para melhorar a apresentação d
 
 ## 🖥️ Prévia do projeto
 
-<img width="1366" height="1304" alt="Autotech" src="https://github.com/user-attachments/assets/f4773173-b866-4e5e-a102-e7a0c3c11cc0" />
+<img width="1920" height="2894" alt="image" src="https://github.com/user-attachments/assets/74068fd0-a053-4761-a553-704caf298514" />
+
 
 ## 📚 Aprendizados
 
