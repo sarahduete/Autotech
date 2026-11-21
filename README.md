@@ -33,7 +33,9 @@ Ao longo do desenvolvimento, realizei revisões para melhorar a apresentação d
 
 ## 🛠️ Tecnologias utilizadas
 
-*Preencha com as tecnologias que realmente aparecem no código do AutoTech.*
+- HTML
+- CSS
+- PHP
 
 ## 🖥️ Prévia do projeto
 
